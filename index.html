@@ -1,43 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="robots" content="noindex">
-      <title>Loading your survey&hellip;</title>
-    <style>
-          body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-                     background:#f5f6f8;color:#333;display:flex;align-items:center;
-                     justify-content:center;min-height:100vh;margin:0;text-align:center}
-          .card{max-width:420px;padding:32px}
-          .spinner{width:34px;height:34px;border:4px solid #d7d8e0;border-top-color:#5a67d8;
-                         border-radius:50%;margin:0 auto 18px;animation:spin 0.9s linear infinite}
-          @keyframes spin{to{transform:rotate(360deg)}}
-          p{font-size:15px;line-height:1.5}
-          .small{color:#888;font-size:13px;margin-top:10px}
-        </style>
-  </head>
-  <body>
-      <div class="card">
-            <div class="spinner"></div>
-            <p>Thanks for taking part. We're opening your survey now &mdash; please wait a moment.</p>
-          <p class="small">If you are not redirected automatically,
-                <a id="manual" href="#">click here to continue</a>.</p>
-      </div>
-    <script>
-          var forms = [
-                  "https://form.jotform.com/261503531802447",
-                  "https://form.jotform.com/261503483715456",
-                  "https://form.jotform.com/261503963731457",
-                  "https://form.jotform.com/261503618185457",
-                  "https://form.jotform.com/261503511737452",
-                  "https://form.jotform.com/261503913378459",
-                  "https://form.jotform.com/261503501927452",
-                  "https://form.jotform.com/261504115117445"
-                ];
-          var target = forms[Math.floor(Math.random() * forms.length)];
-          document.getElementById("manual").href = target;
-          setTimeout(function () { window.location.replace(target); }, 1200);
-    </script>
-  </body>
-</html>html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Loading your survey</title>
+  <style>
+    body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#f5f6f8;color:#333;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;text-align:center}
+    .card{max-width:420px;padding:32px}
+    .spinner{width:34px;height:34px;border:4px solid #d7d8e0;border-top-color:#5a67d8;border-radius:50%;margin:0 auto 18px;animation:spin 0.9s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    p{font-size:15px;line-height:1.5}
+    .small{color:#888;font-size:13px;margin-top:10px}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="spinner"></div>
+    <p>Thanks for taking part. We are opening your survey now - please wait a moment.</p>
+    <p class="small">If you are not redirected automatically, <a id="manual" href="#">click here to continue</a>.</p>
+  </div>
+  <script>
+    var forms = [
+      "https://form.jotform.com/261503531802447",
+      "https://form.jotform.com/261503483715456",
+      "https://form.jotform.com/261503963731457",
+      "https://form.jotform.com/261503618185457",
+      "https://form.jotform.com/261503511737452",
+      "https://form.jotform.com/261503913378459",
+      "https://form.jotform.com/261503501927452",
+      "https://form.jotform.com/261504115117445"
+    ];
+    var target = forms[Math.floor(Math.random() * forms.length)];
+    document.getElementById("manual").href = target;
+    setTimeout(function(){ window.location.replace(target); }, 1200);
+  </script>
+</body>
+</html>
